@@ -13,3 +13,65 @@ Customer description:
 It includes customer code, name, address and phone number. This information may be used for keeping the records of the customer for any emergency or for any other kind of information.
 Reservation description:
 It includes customer details, code number, flight number, date of booking, date of travel.
+
+## Models
+
+### Airports
+
+| Field | Type | Description |
+| airport code | String | Show air ports code |
+| airport name | String | Show air ports name |
+| city | String | Show air ports city |
+| country | String | Show air ports country |
+
+
+### Flights
+
+| Field | Type | Description |
+| flight number | String | Show flight number |
+| aircraft | String | Show aircraft |
+| departure airport | String | Show departure airport |
+| arrival airport | String | Show arrival airport |
+| departure time | Date | Show departure time |
+| arrival time | Date | Show arrival time |
+| price | String | Show price |
+| seats available | Array | Show seats available |
+| airline | String | Show airline |
+
+### Aircrafts
+
+| Field | Type | Description |
+| aircraft | String | Show aircraft |
+| firstclass_seats | Number | Show first class seats |
+| business_seats | Number | Show business seats |
+| economy_seats | Number | Show economy seats |
+
+### Users
+
+| Field | Type | Description |
+| username | String | Show username |
+| password | String | Show password |
+| email | String | Show email |
+| phone number | String | Show phone number |
+| address | String | Show address |
+| city | String | Show user city |
+| country | String | Show user country |
+| role | String | Show user role |
+
+
+### Bookings
+
+| Field | Type | Description |
+| booking number | String | Show booking number |
+| flight number | String | Show flight number |
+| username | String | Show username |
+| date of booking | Date | Show date of booking |
+| date of travel | Date | Show date of travel |
+| seat number | String | Show seat number |
+| class | String | Show class |
+| price | String | Show price |
+
+
+
+
+
