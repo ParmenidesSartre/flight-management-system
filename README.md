@@ -19,6 +19,7 @@ It includes customer details, code number, flight number, date of booking, date 
 ### Airports
 
 | Field | Type | Description |
+| :---:   | :---: | :---: |
 | airport code | String | Show air ports code |
 | airport name | String | Show air ports name |
 | city | String | Show air ports city |
@@ -28,6 +29,7 @@ It includes customer details, code number, flight number, date of booking, date 
 ### Flights
 
 | Field | Type | Description |
+| :---:   | :---: | :---: |
 | flight number | String | Show flight number |
 | aircraft | String | Show aircraft |
 | departure airport | String | Show departure airport |
@@ -41,6 +43,7 @@ It includes customer details, code number, flight number, date of booking, date 
 ### Aircrafts
 
 | Field | Type | Description |
+| :---:   | :---: | :---: |
 | aircraft | String | Show aircraft |
 | firstclass_seats | Number | Show first class seats |
 | business_seats | Number | Show business seats |
@@ -49,6 +52,7 @@ It includes customer details, code number, flight number, date of booking, date 
 ### Users
 
 | Field | Type | Description |
+| :---:   | :---: | :---: |
 | username | String | Show username |
 | password | String | Show password |
 | email | String | Show email |
@@ -62,6 +66,7 @@ It includes customer details, code number, flight number, date of booking, date 
 ### Bookings
 
 | Field | Type | Description |
+| :---:   | :---: | :---: |
 | booking number | String | Show booking number |
 | flight number | String | Show flight number |
 | username | String | Show username |
