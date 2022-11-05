@@ -12,10 +12,27 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 */
 
 const airportSchema = new mongoose.Schema({
-  airportCode: String,
-  airportName: String,
-  city: String,
-  country: String,
+  airportCode: {
+    type: String,
+    required: true,
+    unique: true,
+    minlength: 3,
+    maxlength: 3,
+  },
+  airportName: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  city: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  country: {
+    type: String,
+    required: true,
+  },
 });
 
 airportSchema.plugin(mongoosePaginate);
