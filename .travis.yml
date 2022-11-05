@@ -7,7 +7,11 @@ cache: npm
 branches:
   only:
     - main
+env:
+  global:
+    - PORT=3000
+    - MONGODB_URL=mongodb://localhost:27017/flight-management
 script:
-  - npm lint
-  - npm test
+  - npm run lint
+  - npm run test
 after_success: npm coverage:coveralls
