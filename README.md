@@ -77,6 +77,18 @@ It includes customer details, code number, flight number, date of booking, date 
 | price | String | Show price |
 
 
+## Routes
+
+### Airports
+
+| Method | Route | Description |
+| :---:   | :---: | :---: |
+| GET | /airports | Show all airports |
+| GET | /airports/:airport_code | Show airport by airport code |
+| POST | /airports | Create new airport |
+| PUT | /airports/:airport_code | Update airport by airport code |
+| DELETE | /airports/:airport_code | Delete airport by airport code |
+
 
 
 
