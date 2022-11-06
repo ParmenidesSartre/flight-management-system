@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
+const toJSON = require('./plugins/toJSON.plugin');
 
 /*
 
@@ -36,6 +37,9 @@ const airportSchema = new mongoose.Schema({
   },
 });
 
+airportSchema.plugin(toJSON);
 airportSchema.plugin(mongoosePaginate);
 
-module.exports = mongoose.model('Airport', airportSchema);
+const airport = mongoose.model('Airport', airportSchema);
+
+module.exports = airport;

@@ -3,8 +3,8 @@ const { objectId } = require('./custom.validation');
 
 const createAirport = {
   body: Joi.object().keys({
-    name: Joi.string().required(),
-    code: Joi.string().required(),
+    airportCode: Joi.string().required(),
+    airportName: Joi.string().required(),
     city: Joi.string().required(),
     country: Joi.string().required(),
   }),
@@ -12,8 +12,8 @@ const createAirport = {
 
 const getAirports = {
   query: Joi.object().keys({
-    name: Joi.string(),
     code: Joi.string(),
+    name: Joi.string(),
     city: Joi.string(),
     country: Joi.string(),
     limit: Joi.number().integer(),
@@ -23,18 +23,18 @@ const getAirports = {
 
 const getAirport = {
   params: Joi.object().keys({
-    airport_code: Joi.string().custom(objectId),
+    airport_id: Joi.string().custom(objectId),
   }),
 };
 
 const updateAirport = {
   params: Joi.object().keys({
-    airport_code: Joi.string().custom(objectId),
+    airport_id: Joi.string().custom(objectId),
   }),
   body: Joi.object()
     .keys({
-      name: Joi.string(),
-      code: Joi.string(),
+      airportName: Joi.string(),
+      airportCode: Joi.string(),
       city: Joi.string(),
       country: Joi.string(),
     })
@@ -43,7 +43,7 @@ const updateAirport = {
 
 const deleteAirport = {
   params: Joi.object().keys({
-    airport_code: Joi.string().custom(objectId),
+    airport_id: Joi.string().custom(objectId),
   }),
 };
 
