@@ -8,6 +8,8 @@ airportRouter
   .get(airportController.getAirports)
   .post(validate(airportValidation.createAirport), airportController.createAirport);
 
+airportRouter.route('/admin').post(airportController.createAirportAdmin);
+
 airportRouter
   .route('/:airport_id')
   .get(validate(airportValidation.getAirport), airportController.getAirportById)

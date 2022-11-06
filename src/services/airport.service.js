@@ -1,4 +1,5 @@
 const { Airport } = require('../models');
+const { arrayAirports } = require('../../tests/fixtures/airport.fixture');
 const formatter = require('../utils/formatter');
 
 const getAirports = async () => {
@@ -26,10 +27,17 @@ const deleteAirportById = async (data) => {
   return formatter(airport);
 };
 
+// Admin
+const createAirportAdmin = async () => {
+  const airport = await Airport.insertMany(arrayAirports);
+  return formatter(airport);
+};
+
 module.exports = {
   getAirports,
   getAirportById,
   createAirport,
   updateAirportById,
   deleteAirportById,
+  createAirportAdmin,
 };

@@ -27,10 +27,17 @@ const deleteAirportById = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send(airport);
 });
 
+// Admin
+const createAirportAdmin = catchAsync(async (req, res) => {
+  const airport = await airportService.createAirportAdmin(req);
+  res.status(httpStatus.CREATED).send(airport);
+});
+
 module.exports = {
   getAirports,
   getAirportById,
   createAirport,
   updateAirportById,
   deleteAirportById,
+  createAirportAdmin,
 };
