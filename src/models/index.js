@@ -1,5 +1,1 @@
-const Airport = require('./airport.model');
-
-module.exports = {
-  Airport,
-};
+module.exports.Airport = require('./airport.model');

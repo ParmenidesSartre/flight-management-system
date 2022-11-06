@@ -36,12 +36,5 @@ describe('Airport model', () => {
       newAirport.country = '';
       await expect(new Airport(newAirport).validate()).rejects.toThrow();
     });
-
-    test('should return uppercase version of airportCode', async () => {
-      newAirport.airportCode = 'abc';
-      const airport = new Airport(newAirport);
-      await airport.validate();
-      expect(airport.airportCode).toBe('ABC');
-    });
   });
 });
