@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
+const toJSON = require('./plugins/toJSON.plugin');
 
 /*
 | Field | Type | Description |
@@ -10,12 +11,18 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 */
 
 const aircraftSchema = new mongoose.Schema({
-  aircraft: String,
+  aircraft: {
+    type: String,
+    required: true,
+    trim: true,
+    minLength: 3,
+  },
   firstclass_seats: Number,
   business_seats: Number,
   economy_seats: Number,
 });
 
+aircraftSchema.plugin(toJSON);
 aircraftSchema.plugin(mongoosePaginate);
 
 module.exports = mongoose.model('Aircraft', aircraftSchema);
